@@ -1,0 +1,38 @@
+.Contador {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.button {
+    padding: 10px 20px;
+    font-size: 16px;
+    color: white;
+    border: none;
+    border-radius: 20px;
+
+    /* animação */
+    animation: mudarCor 3s infinite;
+}
+
+/* animação de cores */
+@keyframes mudarCor {
+    0% {
+        background-color: #ff0000;
+    }
+    25% {
+        background-color: #ff7300;
+    }
+    50% {
+        background-color: #00ff00;
+    }
+    75% {
+        background-color: #007bff;
+    }
+    100% {
+        background-color: #ff0000;
+    }
+}
