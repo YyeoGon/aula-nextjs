@@ -1,37 +1,36 @@
 'use client'
 import styles from "./page.module.css"
-import Link from "next/link"
+import { useState } from "react";
 
-const nomes = [
-  { nome: "Julia Paganni", cor: "#ff6f91" },
-  { nome: "Maria Clara", cor: "#ffca3a" },
-  { nome: "Valentina", cor: "#8ac926" },
-  { nome: "Bia Chaves", cor: "#1982c4" },
-  { nome: "Luana", cor: "#6a4c93" },
-  { nome: "Danieli Kerber", cor: "#ff595e" }
-]
+export default function Exemplo03() {  
 
-export default function Atv3() {
-  return (
-    <div className={styles.container}>
-      <div className={styles.title}>
-        <h1>Atividade 3</h1>
-        <p>Galeria de nomes especiais</p>
-      </div>
+    const [num, setNum] = useState(100);
 
-      <div className={styles.cards}>
-        {nomes.map((item, index) => (
-          <article key={item.nome} className={styles.card} style={{ '--card-color': item.cor }}>
-            <span className={styles.badge}>{index + 1}</span>
-            <h2>{item.nome}</h2>
-            <p>Uma homenagem animada para essa pessoa incrível.</p>
-          </article>
-        ))}
-      </div>
+    function handleIncrementa () {
+        setNum(num + 1);
+    }
 
-      <div className={styles.footer}>
-        <Link href="/" className={styles.backButton}>← Voltar para Início</Link>
-      </div>
-    </div>
-  )
+    function handleDecrementa () {
+        setNum(num - 1);
+    }
+    function handleDivide () {
+        setNum(num / 2);
+    }
+    function handleMultiplica () {
+        setNum(num * 2);
+    }
+
+    return (
+       
+        <div className={styles.Contador}>
+            <label>{`Contador: ${num}`}</label>
+            <div className={styles.buttonContainer}>
+                <label onClick={() => handleDecrementa()} className={styles.buttonDecrement}>-1</label>
+                <label onClick={() => handleIncrementa()} className={styles.button}>+1</label>
+                 <label onClick={() => handleDivide()} className={styles.buttonDivider}>/2</label>
+                  <label onClick={() => handleMultiplica()} className={styles.buttonMultiplier}>*2</label>
+            </div>
+            </div>
+
+    );
 }
