@@ -1,0 +1,41 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 50px;
+    padding: 20px;
+}
+
+.acaoContainer {
+    margin-bottom: 40px;
+    text-align: center;
+}
+
+.acaoContainer h2 {
+    font-size: 24px;
+    margin-bottom: 15px;
+}
+
+.acaoDisplay {
+    min-height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 2px solid #ddd;
+    border-radius: 8px;
+    padding: 10px 20px;
+    background-color: #f9f9f9;
+}
+
+.acao {
+    font-size: 20px;
+    font-weight: bold;
+    color: #333;
+}
+
+.botoesContainer {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
