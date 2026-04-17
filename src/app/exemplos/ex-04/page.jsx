@@ -2,7 +2,7 @@
 
 import { useState } from 'react';
 
-import Botao from './botão';
+import Botao from './botao';
 
 import styles from './page.module.css';
 
