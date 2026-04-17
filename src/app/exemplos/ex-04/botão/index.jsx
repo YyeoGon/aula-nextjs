@@ -1,12 +1,10 @@
 import styles from './index.module.css';
 
 function Botao({ texto, aoClicar, acao }) {
+    const className = `${styles.botao} ${acao === '+' ? styles.mais : styles.menos}`;
+
     return (
-        <button
-            className={`${styles.botao} ${acao === '+' ? styles.mais : styles.menos}`}
-            // className={styles.botao + ' ' + acao === '+' ? styles.mais : styles.menos}
-            onClick={aoClicar}
-        >
+        <button type="button" className={className} onClick={aoClicar}>
             {texto}
         </button>
     );

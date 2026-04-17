@@ -4,9 +4,8 @@ import { useState } from 'react';
 
 import styles from './page.module.css';
 
-export default function FormComponent() {
+export default function Exemplo05() {
 
-    // const [formData, setFormData] = useState({ nome: '', email: '' });
     const [login, setLogin] = useState('');
     const [senha, setSenha] = useState('');
 
@@ -16,32 +15,14 @@ export default function FormComponent() {
     const handleSubmit = (e) => {
         e.preventDefault();
 
-        // console.log("Enviando para API:", formData);
-        // Aqui você faria um POST para sua API
-
-        // if (login && senha) {
-        //     console.log('Dados do formulário enviados!');
-        //     console.log(`Usuário: ${login} \nSenha: ${senha}`);
-        
-        //     let historicoTemp = historico;
-
-        //     // Exemplo horário
-        //     const horario = new Date();
-        //     historicoTemp.push(`Usuário: ${login} - Horário ${horario.toLocaleString()}`);
-
-        //     setHistorico(historicoTemp);
-        //     // console.log(historico);
-
-        // }
-
         if (login && senha) {
-        const horario = new Date();
-        const novaEntrada = `Usuário: ${login} - Horário ${horario.toLocaleString()}`;
+            const horario = new Date();
+            const novaEntrada = `Usuário: ${login} - Horário ${horario.toLocaleString()}`;
 
-        // Cria um NOVO array com os elementos antigos + o novo
-        // setHistorico([novaEntrada]);
-        setHistorico([...historico, novaEntrada]);
-    }
+            setHistorico((prevHistorico) => [...prevHistorico, novaEntrada]);
+            setLogin('');
+            setSenha('');
+        }
     };
 
 
@@ -58,17 +39,15 @@ export default function FormComponent() {
                     name="login"
                     type="text"
                     placeholder='usuário'
+                    value={login}
                     onChange={e => setLogin(e.target.value)}
-                // value={formData.nome}
-                // onChange={(e) => setFormData({ ...formData, nome: e.target.value })}
                 />
                 <input
                     name="senha"
                     type="password"
                     placeholder='senha'
+                    value={senha}
                     onChange={e => setSenha(e.target.value)}
-                // value={formData.nome}
-                // onChange={(e) => setFormData({ ...formData, nome: e.target.value })}
                 />
                 <button type="submit">Acessar sistema</button>
             </form>
