@@ -1,6 +1,6 @@
 import { Geist, Geist_Mono } from "next/font/google";
-import "./estilizacao/reset.css" ;
-import "./estilizacao/globals.css" ;
+import "./estilizacao/reset.css";
+import "./estilizacao/globals.css";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -13,8 +13,8 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata = {
-  title: "Aula introdução next JS",
-  description: "React com nest JS",
+  title: "Aula introdução Next JS",
+  description: "React com Next JS",
 };
 
 export default function RootLayout({ children }) {
