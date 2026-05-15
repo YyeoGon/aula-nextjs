@@ -1,0 +1,198 @@
+/* page.module.css */
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: #f8fafc;
+    font-family: sans-serif;
+}
+
+.card {
+    background: white;
+    padding: 30px;
+    border-radius: 20px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05);
+    width: 400px;
+}
+
+.brand {
+    text-align: center;
+    color: #333;
+    margin-bottom: 5px;
+    font-size: 1.1rem;
+}
+
+.title {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 20px;
+    font-size: 1.5rem;
+}
+
+.field {
+    margin-bottom: 15px;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.label {
+    font-size: 0.85rem;
+    color: #64748b;
+    font-weight: 600;
+}
+
+.input,
+.select {
+    padding: 12px;
+    border: 1px solid #e2e8f0;
+    border-radius: 10px;
+    background: #f1f5f9;
+    outline: none;
+}
+
+.row {
+    display: flex;
+    gap: 15px;
+    align-items: flex-end;
+    margin-bottom: 15px;
+}
+
+/* --- AQUI ESTÁ A SOLUÇÃO DO ALINHAMENTO DO RADIO --- */
+.radioGroup {
+    display: flex;
+    gap: 20px;
+    padding: 10px 0;
+}
+
+.radioOption {
+    display: flex;
+    align-items: center;
+    /* Alinha o círculo com o texto verticalmente */
+    gap: 8px;
+    /* Espaço entre o círculo e a palavra Sim/Não */
+    cursor: pointer;
+    font-size: 1rem;
+}
+
+.radioOption input {
+    width: 18px;
+    height: 18px;
+    cursor: pointer;
+}
+
+/* -------------------------------------------------- */
+
+.color {
+    width: 100%;
+    height: 45px;
+    border: none;
+    cursor: pointer;
+    border-radius: 8px;
+}
+
+.btnNext {
+    width: 100%;
+    padding: 15px;
+    background: #6366f1;
+    color: white;
+    border: none;
+    border-radius: 12px;
+    font-weight: bold;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+.btnAdd {
+    background: none;
+    border: 2px dashed #cbd5e1;
+    width: 100%;
+    padding: 10px;
+    border-radius: 10px;
+    color: #64748b;
+    cursor: pointer;
+    margin: 10px 0;
+}
+
+.memberItem {
+    display: flex;
+    gap: 5px;
+    margin-bottom: 8px;
+}
+
+.inputShort {
+    width: 60px;
+    padding: 10px;
+    border: 1px solid #e2e8f0;
+    border-radius: 8px;
+}
+
+.btnTrash {
+    background: #fee2e2;
+    border: none;
+    color: #ef4444;
+    padding: 5px;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.4);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.modal {
+    background: white;
+    padding: 40px;
+    border-radius: 20px;
+    text-align: center;
+    max-width: 300px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+}
+
+.summary {
+    background: #f8fafc;
+    padding: 15px;
+    border-radius: 10px;
+    font-size: 0.9rem;
+    line-height: 1.6;
+}
+
+.footerBtns {
+    display: flex;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+.btnBack {
+    flex: 1;
+    padding: 12px;
+    border: 1px solid #e2e8f0;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.btnSave {
+    flex: 2;
+    padding: 12px;
+    background: #22c55e;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+}
